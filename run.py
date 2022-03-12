@@ -18,13 +18,16 @@ for file in text_files:
         img_counter = 0
         fruit_data = {}
 
-        for i, line in keys:
+        for i, line in enumerate(opened, 1):
             if not line.strip():
                 continue
             
-            if i == 1:
+            if i == len(keys):
+                # skip if the length of file more than data that we need
+                break
+            elif i == 1:
                 # add only the number value of fruit weight
-                fruit_data[keys[i]] = int((re.search(r'\d+', line)))
+                fruit_data[keys[i]] = int(re.search(r'\d+', "100 libs").group())
             else:
                 fruit_data[keys[i]] = line
         

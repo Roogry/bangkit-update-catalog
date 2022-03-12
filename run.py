@@ -4,6 +4,7 @@ import requests
 import re
 
 fruit_catalogs = []
+img_counter = 0
 image_path = 'supplier-data/images/'
 desc_path = 'supplier-data/descriptions/' 
 
@@ -15,7 +16,6 @@ for file in text_files:
     keys = ['name', 'weight', 'description']
 
     with open(desc_path + file, 'r') as opened:
-        img_counter = 0
         fruit_data = {}
 
         for i, line in enumerate(opened, 1):

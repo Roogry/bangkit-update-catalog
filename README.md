@@ -39,3 +39,20 @@ all images within ==~/supplier-data/images== directory to the
 following specifications:
 - **Size**: Change image resolution from **3000x2000** to **600x400** pixel
 - **Format**: Change image format from **.TIFF** to **.JPEG**
+
+### 4. Uploading the descriptions
+To add fruit images and their descriptions from the supplier on the fruit 
+catalog web-server, Python script will automatically POST the fruit images 
+and their respective description in JSON format.
+
+The json data should be looks like:
+=={"name": "Test Fruit", "weight": 100, "description": "This is the 
+description of my test fruit", "image_name": "icon.sheet.png"}==
+
+Script named ==run.py== to process the text files (001.txt, 003.txt ...) 
+from the ==supplier-data/descriptions== directory. The script should turn 
+the data into a JSON dictionary by adding all the required fields, 
+including the image associated with the fruit (image_name), and 
+uploading it to ==http://[linux-instance-external-IP]/fruits== 
+using the Python **requests** library.
+

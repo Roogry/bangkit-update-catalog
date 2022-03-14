@@ -21,9 +21,9 @@ The data contains large images with an associated description of the products
 in two files (**.TIF** for the image and **.txt** for the description). 
 Run code below to do that. 
 
-`sudo chmod +x ~/download_drive_file.sh
-./download_drive_file.sh 1LePo57dJcgzoK4uiI_48S01Etck7w_5f supplier-data.tar.gz
-tar xf ~/supplier-data.tar.gz`
+`sudo chmod +x ~/download_drive_file.sh`
+`./download_drive_file.sh 1LePo57dJcgzoK4uiI_48S01Etck7w_5f supplier-data.tar.gz`
+`tar xf ~/supplier-data.tar.gz`
 
 That code will creates a directory named supplier-data, that contains 
 subdirectories named images and descriptions.
